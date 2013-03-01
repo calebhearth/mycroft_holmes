@@ -1,11 +1,13 @@
 module RabbleInArms
   class Actor
+    attr_accessor :location
+
     def current_hit_points
       0
     end
 
     def location
-      [0, 0]
+      @location ||= [0, 0]
     end
 
     def player

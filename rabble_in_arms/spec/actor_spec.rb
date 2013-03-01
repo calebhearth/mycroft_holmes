@@ -16,8 +16,14 @@ module RabbleInArms
 
     it 'is owned by the null player' do
       actor = Actor.new
+    end
 
-      expect(actor.player).to eq(:null_player)
+    it 'can have its location set' do
+      actor = Actor.new
+
+      actor.location = [1, 1]
+
+      expect(actor.location).to eq([1, 1])
     end
 
     it 'has a null order' do
